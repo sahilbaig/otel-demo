@@ -24,7 +24,7 @@ func initExporter(ctx context.Context) (sdktrace.SpanExporter, error) {
 	)
 }
 
-const jsLambdaUrl = "https://df6sdws2d56b3cybddvhmj42gu0iukhh.lambda-url.us-east-1.on.aws/"
+const jsLambdaUrl = "JS Lambda URL removed from here"
 
 func handler(ctx context.Context) (string, error) {
 	tracer := otel.Tracer("go-lambda-tracer")
