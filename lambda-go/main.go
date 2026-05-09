@@ -77,6 +77,8 @@ func main() {
 
 	//Register this trace provider globally
 	otel.SetTracerProvider(tp)
+	// Wont Propogate without this
+	otel.SetTextMapPropagator(propagation.TraceContext{})
 
 	defer func() {
 		_ = tp.ForceFlush(ctx)
